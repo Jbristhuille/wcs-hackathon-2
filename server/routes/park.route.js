@@ -5,10 +5,4 @@ Router.get("/", parkController.getAll);
 
 
 
-
-
-
-
-
-
 module.exports=router;
