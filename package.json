@@ -1,0 +1,19 @@
+{
+  "name": "wcs-hackathon-2",
+  "version": "0.1.0",
+  "description": "Wild Code School Hackathon 2 participation.",
+  "scripts": {
+    "dev-client": "npm --prefix ./client start",
+    "dev-server": "npm --prefix ./server run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jbristhuille/wcs-hackathon-2.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jbristhuille/wcs-hackathon-2/issues"
+  },
+  "homepage": "https://github.com/Jbristhuille/wcs-hackathon-2#readme"
+}
