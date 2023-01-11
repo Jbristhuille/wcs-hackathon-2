@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.scss';
+
 import HomePage from "./components/HomePage/HomePage";
 import QRCodePage from "./pages/QRCodePage/QRCodePage";
+import ParksMapPage from "./pages/ParksMapPage/ParksMapPage";
 
 function App() {
   return (
@@ -10,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/cars" element={<HomePage />}/>
           <Route path="/qr" element={<QRCodePage />}/>
+          <Route path="/parks" element={<ParksMapPage />} />
         </Routes>
       </Router>
     </div>
