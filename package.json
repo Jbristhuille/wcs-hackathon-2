@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "Wild Code School Hackathon 2 participation.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev-client": "npm --prefix ./client start",
+    "dev-server": "npm --prefix ./server run dev"
   },
   "repository": {
     "type": "git",
