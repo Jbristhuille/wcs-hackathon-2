@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
 import "./Cars.scss";
 import Model3dPreview from '../Model3dPreview/Model3dPreview'
 import axios from "axios";
@@ -34,10 +35,13 @@ function Cars() {
     }
 
     return (
-        <div>
+        <div className='ContainerCard'>
+            <div className='button'>
+                <button className='buttonPrev'onClick={changePrev}>&#10096;</button>
+                <button className='buttonNext'onClick ={changeNext}>&#10097;</button>
+            </div>
             {(card && card[picture]) && 
                 <div className='CarCard'>
-                    <button className='buttonprev'onClick={changePrev}>&#10096;</button>
                     
                     <div className='Car3D'>
                         <Model3dPreview modelUrl={card[picture].view}/>
@@ -45,17 +49,16 @@ function Cars() {
                     
                     <div className='Stats'>
                         <h2 className='titleH2'>Stats</h2>
-                        <h4 className='titleh4'>Modele</h4>
-                        <p>{card[picture].model}</p>
-                        <h4 className='titleh4'>Consumption</h4>
-                        <p>{card[picture].consumption}</p>
-                        <h4 className='titleh4'>Place Number</h4>
-                        <p>{card[picture].places}</p>
-                        <h4 className='titleh4'>Note</h4>
-                        <p>{card[picture].comfort}</p>
+                        <h4 className='titleH4'>Modle</h4>
+                        <p className='P'>{card[picture].model}</p>
+                        <h4 className='titleH4'>Consommation</h4>
+                        <p className='P'>{card[picture].consumption}</p>
+                        <h4 className='titleH4'>Nombre de places</h4>
+                        <p className='P'>{card[picture].places}</p>
+                        <h4 className='titleH4'>Note</h4>
+                        <p className='P'>{card[picture].comfort}</p>
                     </div>
-                    <button className='buttonnext'onClick ={changeNext}>&#10097;</button>
-                    <button className='btn'>Validation</button>
+                    <Link className='btn' to="/qr">Validation</Link>
                 </div>
             }
         </div>
