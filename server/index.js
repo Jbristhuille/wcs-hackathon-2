@@ -10,11 +10,12 @@ app.use(express.json())
 const carRoute = require("./routes/car.route");
 const parkRoute = require("./routes/park.route");
 const qrRoute = require("./routes/qr.route");
+const usersRoute = require("./routes/users.route");
 
 app.use('/cars', carRoute);
 app.use('/parks', parkRoute);
-app.use('/qr',qrRoute);
-
+app.use('/qr', qrRoute);
+app.use('/users', usersRoute);
 
 app.listen(process.env.PORT, () => {
     console.log(`Server started on port ${process.env.PORT}`);
