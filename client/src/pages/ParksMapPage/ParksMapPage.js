@@ -51,9 +51,11 @@ const ParksMapPage = () => {
                                             <h3>{d.city}</h3>
                                         </div>
                                         
-                                        <Link to={`/cars?park=${d.id}`}>
-                                            <p>Aller au parc</p>
-                                        </Link>
+                                        <div className="go-button">
+                                            <Link to={`/cars?park=${d.id}`}>
+                                                Aller au parc
+                                            </Link>
+                                        </div>
                                     </div>
                                 </Popup>
                             </Marker>
