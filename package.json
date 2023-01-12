@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jbristhuille/wcs-hackathon-2/issues"
   },
-  "homepage": "https://github.com/Jbristhuille/wcs-hackathon-2#readme"
+  "homepage": "https://github.com/Jbristhuille/wcs-hackathon-2#readme",
+  "dependencies": {
+    "sha.js": "^2.4.11"
+  }
 }

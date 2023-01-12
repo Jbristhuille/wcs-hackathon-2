@@ -3,6 +3,9 @@ import QRCode from "react-qr-code";
 import "./QrValidation.scss"
 
 const QrValidation = ({hex}) => {
+
+
+
     return(
         <div className="QRCode-title">
             <h2>{hex}</h2>
