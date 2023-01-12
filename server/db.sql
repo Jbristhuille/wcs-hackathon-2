@@ -66,11 +66,10 @@ INSERT INTO car (model, places, consumption, comfort, park_id, view) VALUES
     ("Twizy", "2", "10kw/h", "3/10", 1, "https://sketchfab.com/3d-models/renault-twizy-ab17370588034d8a811d7fef955064c7"),
     ("Master", "3", "15L/100Km", "8/10", 1,"https://sketchfab.com/3d-models/renault-master-volea-da771f3976a64d7d975e3e1bbfef3412" ),
     ("Truck", "4", "20L/100Km", "9/10", 1, "https://sketchfab.com/3d-models/renault-truck-e2fa9fcb75bd415ba15e39209347ba1f"),
-    ("1m", "5", "19L/100Km", "7/10", 1, "https://sketchfab.com/3d-models/ac-bmw-1m-f0ac8fa9bf1e4d79a03a4a3ea6d24afa")
-    ("Twizy", "2", "10kw/h", "3/10", 2, "https://sketchfab.com/3d-models/renault-twizy-ab17370588034d8a811d7fef955064c7"),
+    ("1m", "5", "19L/100Km", "7/10", 1, "https://sketchfab.com/3d-models/ac-bmw-1m-f0ac8fa9bf1e4d79a03a4a3ea6d24afa"),
     ("Duster", "5", "12L/100Km", "9/10", 2,"https://sketchfab.com/3d-models/renault-duster-2018-997ae3649b2041d5a76c3e9096c4a07c"),
     ("Kangoo", "7", "14L/100Km", "10/10", 2, "https://sketchfab.com/3d-models/2022-renault-kangoo-c8be028670624738acf838ea38c99fab"),
     ("Twingo", "4", "9L/100Km", "5/10", 2, "https://sketchfab.com/3d-models/gc-veh-renault-twingo-a6247f2a9f404d598f6a220ad69bfa26"),
     ("AMG cls", "5", "25L/100Km", "9/10", 2, "https://sketchfab.com/3d-models/mercedes-benz-amg-cls-4ef108f906e84bcaa3e66bed9b4cef9f"),
     ("g55", "8", "30L/100Km", "10/10", 2, "https://sketchfab.com/3d-models/mercedes-benz-g55w263-amg-34fd2fc081014deab1240ab2a199920a"),
-    ("e30", "4", "17L/100Km", "6/10", 2, "https://sketchfab.com/3d-models/bmw-m3-coupe-e30-1986-8fa21fe97a6042a2a09e0b09fd546b91"),
+    ("e30", "4", "17L/100Km", "6/10", 2, "https://sketchfab.com/3d-models/bmw-m3-coupe-e30-1986-8fa21fe97a6042a2a09e0b09fd546b91");
