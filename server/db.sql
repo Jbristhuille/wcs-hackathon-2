@@ -30,7 +30,8 @@ DROP TABLE IF EXISTS `NFC`.`park` ;
 CREATE TABLE IF NOT EXISTS `NFC`.`park` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `city` VARCHAR(256) NULL,
-    `location` VARCHAR(256) NULL,
+    `lon` FLOAT NULL,
+    `lati` DOUBLE NULL,
     `name` VARCHAR(256) NULL,
     PRIMARY KEY (`id`));
 
@@ -56,10 +57,9 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 
-
-INSERT INTO park (city, location, name) VALUES 
-    ("Nantes", "47.21153093995679, -1.5474011982711073", "SixtCar"),
-    ("Paris", "48.86064062842428, 2.3391368644217834", "FranchCar");
+INSERT INTO park (city, lon, lati, name) VALUES 
+    ("Nantes", 47.211479923723594, -1.5475406727683254, "SixtCar"),
+    ("Paris", 48.8549749713882, 2.3185874328721785, "FranchCar");
 INSERT INTO car (model, places, consumption, comfort, park_id, view) VALUES
     ("Clio", "4","11L/100Km","7/10", 1, "https://sketchfab.com/3d-models/renault-clio-moschino-bdf95d3a877141209bd05d5a8c490472"),
     ("Megane", "5", "10L/100Km", "5/10", 1, "https://sketchfab.com/3d-models/renault-megane-ii-a9e27249111c4e4a9b861ff35d1edab9"),

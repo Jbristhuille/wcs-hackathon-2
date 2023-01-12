@@ -1,0 +1,30 @@
+.popup{
+    width: 18em;
+    
+    .info{
+        margin-top: 10%;
+    }
+    
+    .carte{
+        display: flex;
+        text-align: center;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+
+    p{
+        color: black;
+        border-radius: 10px;
+        border: solid 1px black;
+        margin-top: 70%;
+        width: 8em;
+        padding: 5%;
+        transition: all 0.2s ease-in-out;
+    }
+
+    p:hover{
+        background-color: rgba(0, 0, 0, 0.207);
+    }
+}
