@@ -5,7 +5,6 @@ import "./HomePage.scss";
 const HomePage = () => {
     return (
         <div>
-            <input className='Search' placeholder='Search...'></input>
             <Cars/>
         </div>
     );
