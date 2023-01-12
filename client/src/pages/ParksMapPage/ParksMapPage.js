@@ -22,9 +22,8 @@ const ParksMapPage = () => {
         axios
             .get(`${process.env.REACT_APP_SERVER}/parks`)
             .then((res) => {
+                console.log(res.data);
                 setData(res.data);
-                
-                // si res.data[0] existe -> met à jour position [res.data[0].lon, res.data[0].lati]
             })
             .catch((err) => {
                 console.error(err);
