@@ -1,15 +1,26 @@
-const { findAll, findGetId } = require("../models/car.model");
+const { findAll, findGetId, findCarPark } = require("../models/car.model");
 
 const getAll = (req, res) => {
-    findAll()
-        .then(([list]) => {
-            res.status(200).send(list);
-        })
-        .catch((error) => {
-            console.error(error);
-            res.status(500).send("impossible d'afficher les véhicules");
-        });
+    if(req.query.park){
+        findCarPark(req.query.park)
+            .then(([liste]) => {
+                res.status(200).send(liste)
+            }).catch((err) => {
+                console.error(err);
+                return res.status(500).send("ça beug");
+            });
+    }else{
+        findAll()
+            .then(([list]) => {
+                res.status(200).send(list);
+            })
+            .catch((error) => {
+                console.error(error);
+                res.status(500).send("impossible d'afficher les véhicules");
+            });
+    }
 };
+
 
 const getId = (req, res) => {
     findGetId(req.params.id)
