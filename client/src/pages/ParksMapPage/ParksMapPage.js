@@ -15,14 +15,14 @@ L.Icon.Default.mergeOptions({
 });
 
 const ParksMapPage = () => {
-    const position = [47.20568313589866, -1.5484420808474708];
-    const [data, setData] = useState([])
+    const [position, setPosition] = useState(null);
+    const [data, setData] = useState([]);
 
     const mapPark = () => {
         axios
             .get(`${process.env.REACT_APP_SERVER}/parks`)
             .then((res) => {
-                console.log(res.data);
+                setPosition([res.data[0].lon, res.data[0].lati]);
                 setData(res.data);
             })
             .catch((err) => {
@@ -35,31 +35,33 @@ const ParksMapPage = () => {
     }, []);
 
     return (
-        <>
-            <MapContainer style={{width: '100vw', height: '100vh'}} center={position} zoom={14}>
-                <TileLayer  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-                    <input placeholder='oinsa'></input>
-                                
-                {data.map((d) => {
-                    return(
-                        <Marker key={d.id} position={[d.lon, d.lati]}>
-                            <Popup className='popup'>
-                                <div className='carte'>
-                                    <div className='info'>
-                                        <h2>{d.name}</h2>
-                                        <h3>{d.city}</h3>
-                                    </div>
-                                        <Link to={`/cars/`}>
+        <div className="parks-map">
+            {(data && position) && 
+                <MapContainer style={{width: '100vw', height: '100vh'}} center={position} zoom={14}>
+                    <TileLayer  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+
+                    {data.map((d) => {
+                        return(
+                            <Marker key={d.id} position={[d.lon, d.lati]}>
+                                <Popup className='popup'>
+                                    <div className='carte'>
+                                        <div className='info'>
+                                            <h2>{d.name}</h2>
+                                            <h3>{d.city}</h3>
+                                        </div>
+                                        
+                                        <Link to={`/cars?park=${d.id}`}>
                                             <p>Aller au parc</p>
                                         </Link>
-                                </div>
-                            </Popup>
-                        </Marker>
-                    )
-                })}
-            </MapContainer>   
-        </> 
+                                    </div>
+                                </Popup>
+                            </Marker>
+                        )
+                    })}
+                </MapContainer> 
+            }
+        </div> 
     );
 };
 
