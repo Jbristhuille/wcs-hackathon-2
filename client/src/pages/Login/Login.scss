@@ -1,0 +1,31 @@
+.login-page {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+
+    * {
+        width: 100%;
+    }
+    
+    .login-item {
+        display: grid;
+        grid-gap: 5px;
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    }
+
+    button {
+        box-sizing: border-box;
+        padding: 10px;
+    }
+}

@@ -13,7 +13,7 @@ const login = async (req, res) => {
         delete user.password;
         user["token"] = jwt.sign(user, process.env.SECRET, {expiresIn: '8h'});
 
-        return res.status(500).send(user);
+        return res.status(200).send(user);
     } catch (err) {
         console.error(err);
         return res.status(500).send("An error occured");
