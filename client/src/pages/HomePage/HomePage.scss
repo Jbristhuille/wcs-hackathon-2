@@ -1,0 +1,14 @@
+.home-page {
+    padding: 20px;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

@@ -1,31 +1,41 @@
 .login-page {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    height: 100%;
     padding: 20px;
 
-    * {
+    .card {
         width: 100%;
-    }
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
     
-    .login-item {
-        display: grid;
-        grid-gap: 5px;
-
-        label {
-            font-size: 18px;
-            font-weight: bold;
+        * {
+            width: 100%;
+        }
+        
+        .login-item {
+            display: grid;
+            grid-gap: 5px;
+    
+            label {
+                font-size: 18px;
+                font-weight: bold;
+            }
+    
+            input {
+                padding: 10px;
+                box-sizing: border-box;
+                border-radius: var(--radius);
+                border-color: rgba(#333, 0.3);
+            }
         }
 
-        input {
-            padding: 10px;
-            box-sizing: border-box;
+        .my-button {
+            margin-top: 10px;
         }
-    }
-
-    button {
-        box-sizing: border-box;
-        padding: 10px;
     }
 }

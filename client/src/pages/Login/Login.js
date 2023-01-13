@@ -15,7 +15,6 @@ const Login = () => {
             pseudo: login,
             password: passwd
         }).then((res) => {
-            // todo: save user infos on context
             navigate('/parks');
         }).catch((err) => {
             console.error(err);
@@ -25,29 +24,35 @@ const Login = () => {
 
     return (
         <div className="login-page">
-            <div className="login-item">
-                <label htmlFor="login">Identifiant:</label>
-                <input  id="login"
-                        name="login"
-                        value={login}
-                        type="text"
-                        placeholder="ex: toto"
-                        onChange={(e) => setLogin(e.target.value)} />
-            </div>
+            <div className="card">
+                <h2>Connexion</h2>
 
-            <div className="login-item">
-                <label htmlFor="passwd">Mot de passe:</label>
-                <input  id="passwd"
-                        name="passwd"
-                        value={passwd}
-                        type="text"
-                        placeholder="ex: 123"
-                        onChange={(e) => setPasswd(e.target.value)} />
-            </div>
+                <div className="login-item">
+                    <label htmlFor="login">Identifiant:</label>
+                    <input  id="login"
+                            name="login"
+                            value={login}
+                            type="text"
+                            placeholder="ex: myNickname"
+                            onKeyDown={(e) => e.key === "Enter" && connect()}
+                            onChange={(e) => setLogin(e.target.value)} />
+                </div>
 
-            <button onClick={connect}>
-                Connexion
-            </button>
+                <div className="login-item">
+                    <label htmlFor="passwd">Mot de passe:</label>
+                    <input  id="passwd"
+                            name="passwd"
+                            value={passwd}
+                            type="password"
+                            placeholder="ex: pAssw0r2"
+                            onKeyDown={(e) => e.key === "Enter" && connect()}
+                            onChange={(e) => setPasswd(e.target.value)} />
+                </div>
+
+                <button className="my-button" onClick={connect}>
+                    Connexion
+                </button>
+            </div>
         </div>
     );
 };

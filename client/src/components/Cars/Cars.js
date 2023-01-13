@@ -40,6 +40,7 @@ function Cars() {
                 <button className='buttonPrev'onClick={changePrev}>&#10096;</button>
                 <button className='buttonNext'onClick ={changeNext}>&#10097;</button>
             </div>
+            
             {(card && card[picture]) && 
                 <div className='CarCard'>
                     
@@ -48,19 +49,31 @@ function Cars() {
                     </div>
                     
                     <div className='Stats'>
-                        <h2 className='titleH2'>Stats</h2>
-                        <h4 className='titleH4'>Modle</h4>
-                        <p className='P'>{card[picture].model}</p>
-                        <h4 className='titleH4'>Consommation</h4>
-                        <p className='P'>{card[picture].consumption}</p>
-                        <h4 className='titleH4'>Nombre de places</h4>
-                        <p className='P'>{card[picture].places}</p>
-                        <h4 className='titleH4'>Note</h4>
-                        <p className='P'>{card[picture].comfort}</p>
+                        <h2 className='titleH2'>{card[picture].model}</h2>
+                        
+                        <div className="details">
+                            <div className="details-items">
+                                <h4 className='titleH4'>Consommation</h4>
+                                <p className='P'>{card[picture].consumption}</p>
+                            </div>
+
+                            <div className="details-items">
+                                <h4 className='titleH4'>Nombre de places</h4>
+                                <p className='P'>{card[picture].places}</p>
+                            </div>
+
+                            <div className="details-items">
+                                <h4 className='titleH4'>Note</h4>
+                                <p className='P'>{card[picture].comfort}</p>
+                            </div>
+
+                        </div>
+
                     </div>
-                    <Link className='btn' to="/qr">Validation</Link>
                 </div>
             }
+
+            <Link className='my-button' to="/qr">Validation</Link>
         </div>
     );
 };

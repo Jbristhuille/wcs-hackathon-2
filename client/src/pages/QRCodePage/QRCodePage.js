@@ -23,7 +23,7 @@ const QRCodePage = () => {
     }, [])
 
     return (qr &&
-        <div>
+        <div className="qr-page">
             <QrValidation hex={qr}/>
         </div>
     );

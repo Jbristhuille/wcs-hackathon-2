@@ -73,3 +73,6 @@ INSERT INTO car (model, places, consumption, comfort, park_id, view) VALUES
     ("AMG cls", "5", "25L/100Km", "9/10", 2, "https://sketchfab.com/3d-models/mercedes-benz-amg-cls-4ef108f906e84bcaa3e66bed9b4cef9f"),
     ("g55", "8", "30L/100Km", "10/10", 2, "https://sketchfab.com/3d-models/mercedes-benz-g55w263-amg-34fd2fc081014deab1240ab2a199920a"),
     ("e30", "4", "17L/100Km", "6/10", 2, "https://sketchfab.com/3d-models/bmw-m3-coupe-e30-1986-8fa21fe97a6042a2a09e0b09fd546b91");
+
+INSERT INTO user (pseudo, password) VALUES 
+    ("test", "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3");
